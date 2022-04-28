@@ -1,5 +1,6 @@
 # project name : growth-prediction
 
+###current version : 4.28
 
 #
 디렉토리 설명
@@ -22,8 +23,6 @@ setting : 백엔드가 서버관리를 할 때 필요한 파일 .js .json .lock 
 본인의 git에서 로컬로 clone하여 작업한다
 
 issue단위로 개발완성시 fetch한 본인의 git에 commit한다(선택사항) 그리고 이 레파지토리에 pull request를 날린다
-
-pull request를 날릴 브랜치 이름은 feature/을 적고 이후에 본인이 작업한 내용의 디렉토리 경로를 적는다 (ex : feature/setting/init-setting) 최종 작업물과은 feature대신 final을 적어서 혹시라도 master 브랜치를 다 날리지 않게하는 안전장치입니다
 
 pull request 메시지는 최대한 자세하게 적어야 팀원들이 잘 알아볼 수 있음
 
