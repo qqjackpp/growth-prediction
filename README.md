@@ -1,6 +1,6 @@
 # project name : growth-prediction
 
-###current version : 4.28
+current version : 4.28
 
 #
 디렉토리 설명
