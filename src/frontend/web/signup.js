@@ -8,6 +8,7 @@ function signup_check() {
 	
 	var id = (String)(formData.get("doctor_id"));
 	var pw = (String)(formData.get("pw"));
+	var pw_check = (String)(formData.get("pw_check"));
 	
 	if ((id.length<10)||(id.length>20)){
 		alert("잘못된 아이디입니다.")
@@ -31,14 +32,14 @@ function signup_check() {
 			return ;
 		}
 	}
-	fetch("/login", {
+	if(!(pw_check===id)){
+		alert("비밀번호가 일치하지 않습니다.");
+		return ;
+	}
+	
+	fetch("/signup", {
 		method : "post",
 		body : formData
 	})
 	
-}
-
-function test() {
-	document.getElementsById("warning_message").style.display = "block";
-	return ;
 }
