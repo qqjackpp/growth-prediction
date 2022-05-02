@@ -67,7 +67,7 @@ header {
 }
 
 .signup_submit {
-	display : block
+	display : block;
 	font-size : 15px;
 	font-weight : bold;
 	color : white;
@@ -87,4 +87,9 @@ header {
 
 .signup_submit:focus{
 	background-color : #018aef;
+}
+
+#warning_message{
+
+	color : white;
 }

@@ -8,7 +8,7 @@
 <link href="index.css" rel="stylesheet" type="text/css">
 <link href="common.css" rel="stylesheet" type="text/css">
 <!-- javascript file -->
-
+<script src="login.js" type="text/javascript" ></script>
 <!-- google gont Noto Sans KR -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +28,11 @@
 	<div class="main">
 		<div class="login_form">
 			<h1>BoneAge Prediction</h1>
-			<form method="post" action="main.jsp"> <!--나중에 로그인 함수 추가-->
+			<form id = "login">
 				<ul type="none">
-				<li><input type="text" name="doctor_id" placeholder="아이디(이메일)" autocomplete="off"  class="login_input" required></li>
-				<li><input type="password" name="pw" placeholder="비밀번호" autocomplete="off" class="login_input" required></li>
-				<li><button type="submit" class="login_button">로그인</button></li>
+				<li><input type="text" name="doctor_id" placeholder="아이디(이메일)" autocomplete="off"  class="login_input"></li>
+				<li><input type="password" name="pw" placeholder="비밀번호" autocomplete="off" class="login_input"></li>
+				<li><button type="submit" class="login_button" onclick="login_check()">로그인</button></li>
 				<li>
 					<div class="under_login">
 						<div class="login_help">

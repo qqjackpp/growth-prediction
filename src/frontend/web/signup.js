@@ -1,10 +1,10 @@
 /**
- * 로그인 함수 구현
+ * 회원가입 함수 구현
  */
- function login_check() {
+function signup_check() {
 	
-	var login_form = document.getElementById("login");
-	var formData = new FormData(login_form);
+	var signup_form = document.getElementById("signup");
+	var formData = new FormData(signup_form);
 	
 	var id = (String)(formData.get("doctor_id"));
 	var pw = (String)(formData.get("pw"));
@@ -36,4 +36,9 @@
 		body : formData
 	})
 	
+}
+
+function test() {
+	document.getElementsById("warning_message").style.display = "block";
+	return ;
 }
