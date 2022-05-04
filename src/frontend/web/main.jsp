@@ -39,17 +39,19 @@
     <div class="child_list_menu">
         <ul>
         <li>등록</li>
-        <li>검색</li>
+        <li>검색</li>
         </ul>
     </div>
     <div class="child_list">
         <table>
-        <%--  
+<%--  
             <% for (Child child : childList) { %>
-            <td>child.name</td><td>child.gender</td><td>child.phoneNumber</td><td></td><td></td><td></td><td></td>
+            <tr>
+            <td><%=child.id%></td><td><%=child.name%></td>
+            <td><%=child.phoneNumber%></td><td></td></tr>
             
             <% }%>
-             --%>
+--%>
         </table>
     </div>
 </div>

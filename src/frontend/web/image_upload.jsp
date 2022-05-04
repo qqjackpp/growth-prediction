@@ -1,12 +1,23 @@
-<!--이미지는 png만
-의사 웹에서는 아이 계정을 찾기만 하고 
-아이와 부모의 계정은 앱에서 등록한다. 즉, 회원가입은 앱에서 진행한다.-->
-jsp 세션
-https://velog.io/@max9106/JSP-Session%EC%84%B8%EC%85%98-j0k5ccyiub
-
-https://okky.kr/article/818241
-
-
-**세션 구현
-**로그인을 fetch로 구현 >> 유효한 입력인가 검사
-** fetch url >> api
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- css file -->
+<link href="common.css" rel="stylesheet" type="text/css">
+<!-- javascript file -->
+<script src="image_upload.js" type="text/javascript" ></script>
+<!-- google gont Noto Sans KR -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+<body>
+<form id="bone_image_upload">
+<input type="file" name = "bone_picture" accept=".png">
+<button onclick="image_check()">제출</button>
+</form>
+</body>
+</html>
