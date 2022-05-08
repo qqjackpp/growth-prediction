@@ -6,13 +6,15 @@
 <title>Main</title>
 <!-- css file -->
 <link href="common.css" rel="stylesheet" type="text/css">
+<link href="main.css" rel="stylesheet" type="text/css">
 <!-- javascript file -->
-
+<script src="main.js" type="text/javascript"></script>
 <!-- google gont Noto Sans KR -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 </head>
 <body>
 
@@ -24,39 +26,22 @@
 	}
 
 --%>
+<%! %>
 <header>
-    <nav>
-        <ul type = "none" class = "navigator">
-        <li class="navigator_menu"><a href="main.html" ><img src="img/logo.png" height="100px"></a></li>
-        <li class="navigator_menu"><a href="main.html">검진</a></li>
-        <li class="navigator_menu"><a href="#">문의</a></li>
-        <li class="navigator_menu"><a href="#">로그아웃</a></li>
-        <li class="navigator_menu"><a href="#">사용자 정보</a></li>
-        </ul>
-    </nav>
+    <%@ include file = "header.jsp"%>
 </header>
 <div class="contents">
-    <div class="child_list_menu">
-        <ul>
-        <li>등록</li>
-        <li>검색</li>
-        </ul>
-    </div>
-    <div class="child_list">
-        <table>
-<%--  
-            <% for (Child child : childList) { %>
-            <tr>
-            <td><%=child.id%></td><td><%=child.name%></td>
-            <td><%=child.phoneNumber%></td><td></td></tr>
-            
-            <% }%>
---%>
-        </table>
+	<button onclick="refresh()">새로고침</button>
+    <div id="children_table">
+
     </div>
 </div>
-<footer>
 
+<footer>
+	<%@ include file = "footer.jsp"%>
 </footer>
+<script>
+getChildrenList();
+</script>
 </body>
 </html>

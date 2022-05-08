@@ -41,5 +41,7 @@ function signup_check() {
 		method : "post",
 		body : formData
 	})
+	.then((response)=>response.json)
+	.catch(console.log("error"));
 	
 }

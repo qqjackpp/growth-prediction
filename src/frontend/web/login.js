@@ -32,8 +32,10 @@
 		}
 	}
 	fetch("/login", {
-		method : "post",
+		method : "POST",
 		body : formData
 	})
+	.then((response)=>response.json)
+	.catch(console.log("error"));
 	
 }

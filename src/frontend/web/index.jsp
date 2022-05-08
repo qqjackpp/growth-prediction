@@ -30,8 +30,8 @@
 			<h1>BoneAge Prediction</h1>
 			<form id = "login">
 				<ul type="none">
-				<li><input type="text" name="doctor_id" placeholder="아이디(이메일)" autocomplete="off"  class="login_input"></li>
-				<li><input type="password" name="pw" placeholder="비밀번호" autocomplete="off" class="login_input"></li>
+				<li><input type="text" name="doctor_id" placeholder="아이디(이메일)" autocomplete="off"  class="login_input" maxlength="20"></li>
+				<li><input type="password" name="pw" placeholder="비밀번호" autocomplete="off" class="login_input" maxlength="20"></li>
 				<li><button type="submit" class="login_button" onclick="login_check()">로그인</button></li>
 				<li>
 					<div class="under_login">
