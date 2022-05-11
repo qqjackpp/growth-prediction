@@ -1,12 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Main</title>
 <!-- css file -->
-<link href="/growth_prediction/css/common.css" rel="stylesheet" type="text/css">
-<link href="/growth_prediction/css/main.css" rel="stylesheet" type="text/css">
+<link href="/growth_prediction/css/common.css" rel="stylesheet"
+	type="text/css">
+<link href="/growth_prediction/css/main.css" rel="stylesheet"
+	type="text/css">
 
 <link href="main.css" rel="stylesheet" type="text/css">
 <link href="common.css" rel="stylesheet" type="text/css">
@@ -18,7 +21,9 @@
 <!-- google gont Noto Sans KR -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+	rel="stylesheet">
 
 <%-- JSTL 필요시 사용 @ taglib uri="http://java.sun.com/jstl/core" prefix="c" --%>
 </head>
@@ -71,7 +76,7 @@
 						<td class="children_table_id"><%=cc.id%></td>
 						<td class="children_table_name"><%=cc.name%></td>
 						<td class="children_table_phone_number"><%=cc.phone_number%></td>
-						<td class="children_table_button"><button onclick="checkup('<%=cc.id%>')" class="select_child">진료하기</button></td>
+						<td class="children_table_button"><button onclick="checkup('<%=cc.id%>', '<%=cc.name%>')" class="select_child">진료하기</button></td>
 					</tr>
 
 					<%
@@ -87,20 +92,23 @@
 
 					</table>
 				</div>
-				<form action="" method="post" onsubmit="return false">
-					<input type="file" name="bone_picture"> 
-					<input type="text" name="child_tall" placeholder="키">
+				<form action="" method="post" onsubmit="return image_check()">
+					<input type="file" name="bone_image" id="bone_image_upload" accept=".png"> 
 					<input type="hidden" name="child_id" id="selected_child_id">
-
+					<input type="hidden" name="child_name" id="selected_child_name">
+					<button>제출</button>
 				</form>
 			</div>
-
 			<div id="registration">
-				<form action="" method="post" onsubmit="return false">
-					<input type="text" placeholder="아이디">
-					<input type="text" placeholder="이름">
-					<input type="text" placeholder="이메일">
-					<input type="tel" placeholder="전화번호">
+				<form action="" method="post" onsubmit="return child_registration_check()" id = "registration_form" autocomplete = "off">
+					<input type="text" name = "child_id" placeholder="아이디 (영어 대소문자와 숫자를 포함해 5~20글자)" maxlength = "20" class = "child_registration">
+					<input type="text" name = "parent_id" placeholder="부모님 아이디 (영어 대소문자와 숫자를 포함해 5~20글자)" maxlength = "20" class = "child_registration">
+					<input type="text" name = "child_name" placeholder="이름" class = "child_registration"> 
+					<input type="text" name = "child_email" placeholder="이메일" class = "child_registration">
+					<input type="tel" name = "phone_number" placeholder="전화번호" class = "child_registration">
+					<input type="tel" name = "parent_phone_number" placeholder="부모님 전화번호" class = "child_registration">
+					<button>등록</button>
+					<%--input type="hidden" name = "registration_date" id = "restration_date"--%>
 				</form>
 			</div>
 		</div>
@@ -109,11 +117,6 @@
 		<%--@ include file="footer.jsp"--%>
 	</footer>
 	<script>
-	1. main페이지의 기본 폼 구성
-	- 아이 검진에는 hidden영역 추가
-
-	2. main페이지 폼의 css구성
-	3. main페이지 파일 업로드의 형식 검사 함수 추가
 	</script>
 </body>
 </html>
