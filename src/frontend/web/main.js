@@ -39,3 +39,19 @@ function refresh() {
 function ba(num) {
 	alert(num)
 }
+
+///image_upload  registration
+function new_child(){
+	document.getElementById("registration").style.display="block";
+	document.getElementById("image_upload").style.display="none";
+	
+}
+
+function checkup(child){
+	document.getElementById("registration").style.display="none";
+	document.getElementById("image_upload").style.display="block";
+	document.getElementById("selected_child_id").value=child;
+	alert(child);
+	console.log(document.getElementById("selected_child_id").value);
+	
+}
