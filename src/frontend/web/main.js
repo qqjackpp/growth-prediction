@@ -6,7 +6,6 @@
  //미사용 함수
 function getChildrenList() {
 
-
 	fetch('https://jsonplaceholder.typicode.com/posts')
 		.then((response) => response.json())
 		.then((json) => {
@@ -94,21 +93,20 @@ function checkup(id, name){
 	document.getElementById("image_upload").style.display="block";
 	document.getElementById("selected_child_id").value=id;
 	document.getElementById("selected_child_name").value=name;
-	alert(id);
 	console.log(document.getElementById("selected_child_id").value);
 }
 
 //첨부 이미지의 확장자 확인(png만 가능)
 function image_check() {
-	var fileInput = document.getElementById("bone_image_upload");
-	var picture = fileInput.files[0];
-	var fileName = picture.name;
-	var extension = fileName.split('.').pop();
+	let fileInput = document.getElementById("bone_image_upload");
+	let picture = fileInput.files[0];
+	let fileName = picture.name;
+	let extension = fileName.split('.').pop();
+	
+	
 	if (extension.toLowerCase() != "png"){
 		alert("이미지 확장자가 png여야만 합니다.")
 		return false;
 	}
 
 }
-
-//이미지 미리보기

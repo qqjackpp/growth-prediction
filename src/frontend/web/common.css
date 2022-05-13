@@ -5,9 +5,14 @@
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
+ul {
+	list-style : none;
+}
+
 header{
     background-color: #a0a0a0;
     height : 100px;
+    min-width : 1080px;
 }
 
 .navigator {

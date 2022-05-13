@@ -57,7 +57,7 @@
 	<div class="main_contents">
 		<div class="select">
 			<div class="above_list">
-				<button onclick="" class="above_button">검색</button>
+				<!-- button onclick="" class="above_button">검색</button -->
 				<button onclick="new_child()" class="above_button">등록</button>
 			</div>
 			<div>
@@ -93,9 +93,9 @@
 					</table>
 				</div>
 				<form action="" method="post" onsubmit="return image_check()">
-					<input type="file" name="bone_image" id="bone_image_upload" accept=".png"> 
-					<input type="hidden" name="child_id" id="selected_child_id">
-					<input type="hidden" name="child_name" id="selected_child_name">
+					<input type="file" name = "bone_image" id="bone_image_upload" accept=".png" required>
+					<input type="text" name = "child_id" readonly id="selected_child_id">
+					<input type="text" name = "child_name" readonly id="selected_child_name">
 					<button>제출</button>
 				</form>
 			</div>

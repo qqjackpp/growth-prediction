@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <title>Sign Up</title>
 <!-- css file -->
+<link href="common.css" rel="stylesheet" type="text/css">
 <link href="signup.css" rel="stylesheet" type="text/css">
 <%--
 <link href="/growth_prediction/css/signup.css" rel="stylesheet" type="text/css">
@@ -29,7 +30,7 @@
 	<div class = "main">
 		<div class = "signup_box">
 			<form action="/growth_prediction/sign"  method = "post" class = "signup_form" id = "signup" autocomplete="off" onsubmit="return signup_check()">
-				<ul type = "none">
+				<ul>
 				<li><input type = "text" placeholder = "아이디 (영어 대소문자와 숫자를 포함해 5~20글자)" name = "doctor_id" class = "signup_input" maxlength="20"></li>
 				<li><input type = "password" placeholder = "비밀번호 (영어 대소문자와 숫자를 포함해 10~20글자)" name = "doctor_pw" class = "signup_input" maxlength="20"></li>
 				<li><input type = "password" placeholder = "비밀번호 확인" name = "pw_check" class = "signup_input" maxlength="20"></li>
