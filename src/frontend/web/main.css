@@ -1,12 +1,12 @@
 .select {
 	width : 400px;
-	background-color : green;
+	background-color : #dadada;
 	float : left;
 }
 
 .work_space_box{
 	width : 680px;
-	background-color : skyblue;
+	background-color : #c1c1c1;
 	float : left;
 }
 
@@ -30,12 +30,14 @@ tr, td{
 }
 
 tr:nth-child(odd){
-	background-color : gray;
+	background-color : #e8e8e8;
 }
 
+tr:nth-child(even){
+	background-color : white;
+}
 .above_list{
 	margin : 10px;
-	background-color : red;
 }
 
 .above_button{
@@ -45,7 +47,7 @@ tr:nth-child(odd){
 }
 
 .above_button:hover{
-	background-color : blue;
+	background-color : #b0def2;
 	
 }
 
@@ -53,8 +55,32 @@ tr:nth-child(odd){
 	background-color : #80ffff;
 	
 }
+
 #image_upload, #registration{
 	margin : 10px;
 	display : none;
 	
+}
+
+.child_registration, .child_info_form{
+	display : block;
+	width : 400px;
+	height : 30px;
+	margin : 10px 0;
+	
+}
+
+.submit_button{
+	display : block;
+	width : 100px;
+	height : 30px;
+	margin : 10px 0;
+}
+
+#bone_image_upload{
+	margin : 10px 0;
+}
+
+.form_list{
+	margin : 10px;
 }

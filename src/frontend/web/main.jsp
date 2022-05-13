@@ -87,28 +87,26 @@
 		</div>
 		<div class="work_space_box">
 			<div id="image_upload">
-				<div class="child_info">
-					<table class="info_table">
-
-					</table>
-				</div>
 				<form action="" method="post" onsubmit="return image_check()">
-					<input type="file" name = "bone_image" id="bone_image_upload" accept=".png" required>
-					<input type="text" name = "child_id" readonly id="selected_child_id">
-					<input type="text" name = "child_name" readonly id="selected_child_name">
-					<button>제출</button>
+				<ul>
+					<li class = "form_list"><input type="hidden" name = "child_id" readonly id="selected_child_id"></li>
+					<li class = "form_list">이름 <input type="text" name = "child_name" readonly id="selected_child_name" class = "child_info_form"></li>
+					<li class = "form_list"><input type="file" name = "bone_image" id="bone_image_upload" accept=".png" required></li>
+					<li class = "form_list"><button class = "submit_button">제출</button></li>
+					</ul>
 				</form>
 			</div>
 			<div id="registration">
 				<form action="" method="post" onsubmit="return child_registration_check()" id = "registration_form" autocomplete = "off">
-					<input type="text" name = "child_id" placeholder="아이디 (영어 대소문자와 숫자를 포함해 5~20글자)" maxlength = "20" class = "child_registration">
-					<input type="text" name = "parent_id" placeholder="부모님 아이디 (영어 대소문자와 숫자를 포함해 5~20글자)" maxlength = "20" class = "child_registration">
-					<input type="text" name = "child_name" placeholder="이름" class = "child_registration"> 
-					<input type="text" name = "child_email" placeholder="이메일" class = "child_registration">
-					<input type="tel" name = "phone_number" placeholder="전화번호" class = "child_registration">
-					<input type="tel" name = "parent_phone_number" placeholder="부모님 전화번호" class = "child_registration">
-					<button>등록</button>
-					<%--input type="hidden" name = "registration_date" id = "restration_date"--%>
+				<ul>
+					<li class = "form_list">아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input type="text" name = "child_id" placeholder="아이디" maxlength = "20" class = "child_registration"></li>
+					<li class = "form_list">부모님 아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input type="text" name = "parent_id" placeholder="부모님 아이디" maxlength = "20" class = "child_registration"></li>
+					<li class = "form_list">이름<input type="text" name = "child_name" placeholder="이름" class = "child_registration"></li> 
+					<li class = "form_list">이메일<input type="text" name = "child_email" placeholder="이메일" class = "child_registration"></li>
+					<li class = "form_list">전화번호<input type="tel" name = "phone_number" placeholder="전화번호" class = "child_registration"></li>
+					<li class = "form_list">부모님 전화번호<input type="tel" name = "parent_phone_number" placeholder="부모님 전화번호" class = "child_registration"></li>
+					<li class = "form_list"><button class = "submit_button">등록</button></li>
+				</ul>
 				</form>
 			</div>
 		</div>
