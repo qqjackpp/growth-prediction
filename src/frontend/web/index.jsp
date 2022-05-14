@@ -34,7 +34,7 @@
 	<div class="contents">
 		<div class="main">
 			<div class="login_form">
-				<h1>BoneAge Prediction</h1>
+				<h1>성장통</h1>
 				<form action="/growth_prediction/main" method="post" id="login" onsubmit="return login_check()">
 					<ul>
 						<li><input type="text" name="doctor_id" placeholder="아이디(이메일)" autocomplete="off" class="login_input" maxlength="20"></li>

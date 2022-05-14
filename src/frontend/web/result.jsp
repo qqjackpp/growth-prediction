@@ -24,9 +24,9 @@
 	<div class="main_contents">
 		<div class = "result_menu">
 			<ul>
-			<li><button onclick="show_result_page()">결과보기</button></li>
-			<li><button onclick="show_privacy_page()">아이 생활 습관</button></li>
-			<li><button onclick="show_report_page()">이전 검사 결과</button></li>	
+			<li><button onclick="show_result_page()" class = "result_menu_button">결과보기</button></li>
+			<li><button onclick="show_privacy_page()" class = "result_menu_button">아이 생활 습관</button></li>
+			<li><button onclick="show_report_page()" class = "result_menu_button">이전 검사 결과</button></li>	
 			</ul>
 		</div>
 
