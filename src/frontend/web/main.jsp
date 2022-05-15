@@ -92,7 +92,7 @@
 					<li class = "form_list"><input type="hidden" name = "child_id" readonly id="selected_child_id"></li>
 					<li class = "form_list">이름 <input type="text" name = "child_name" readonly id="selected_child_name" class = "child_info_form"></li>
 					<li class = "form_list"><input type="file" name = "bone_image" id="bone_image_upload" accept=".png" required></li>
-					<li class = "form_list"><button class = "submit_button">제출</button></li>
+					<li class = "form_list last"><button class = "submit_button">제출</button></li>
 					</ul>
 				</form>
 			</div>
@@ -105,7 +105,7 @@
 					<li class = "form_list">이메일<input type="text" name = "child_email" placeholder="이메일" class = "child_registration"></li>
 					<li class = "form_list">전화번호<input type="tel" name = "phone_number" placeholder="전화번호" class = "child_registration"></li>
 					<li class = "form_list">부모님 전화번호<input type="tel" name = "parent_phone_number" placeholder="부모님 전화번호" class = "child_registration"></li>
-					<li class = "form_list"><button class = "submit_button">등록</button></li>
+					<li class = "form_list last"><button class = "submit_button">등록</button></li>
 				</ul>
 				</form>
 			</div>

@@ -71,7 +71,6 @@ tr:nth-child(even){
 }
 
 .submit_button{
-	display : block;
 	width : 100px;
 	height : 30px;
 	margin : 10px 0;
@@ -83,4 +82,8 @@ tr:nth-child(even){
 
 .form_list{
 	margin : 10px;
+}
+
+.last{
+	text-align : right;
 }

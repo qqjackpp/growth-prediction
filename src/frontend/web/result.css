@@ -1,16 +1,94 @@
+.main_contents{
+	flex-direction : column;
+	
+}
+
 #child_result_page{
 	display : block;
+
 }
 
 #child_privacy_page{
 	display : none;
+
 }
 
 #child_report_page{
 	display : none;
-	
+}
+.result_page_box, .privacy_page_box, .report_page_box{
+	display : flex;
+	background-color : #dadada;
 }
 
-.result_button_menu{
+.result_menu{
+	width : 100%;
+}
+.result_menu_button{
 	display : inline-block;
+	background-color : #dadada;
+	height : 30px;
+	width : 100px;
+	border : 0;
+	border-bottom : 1px solid black;
+}
+
+
+#show_result_button{
+	border-color : #dadada;
+}
+
+.bone_image{
+	background-color : blue;
+}
+
+.doctor_recommandation{
+	margin : 10px 10px 10px 0;
+	width : 670px;
+	background-color : #c1c1c1;
+}
+
+.report_data{
+	width : 400px;
+}
+
+.result_table {
+	border : 1px solid;
+	border-collapse : collapse;
+	width : 380px;
+	margin : 10px auto;
+	text-align : center;
+}
+
+tr, td{
+	border : 1px solid;
+}
+
+tr:nth-child(odd){
+	background-color : #e8e8e8;
+}
+
+tr:nth-child(even){
+	background-color : white;
+}
+
+.form_list{
+	margin : 10px;
+}
+
+.doctor_form{
+	display : block;
+	width : 400px;
+	height : 30px;
+	margin : 10px 0;
+}
+
+.last{
+	text-align : right;
+}
+
+.submit_button{
+	width : 100px;
+	height : 30px;
+	margin : 10px 0;
 }
