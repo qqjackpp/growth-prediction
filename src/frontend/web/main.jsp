@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Main</title>
+<title>검진하기</title>
 <!-- css file -->
 <link href="/growth_prediction/css/common.css" rel="stylesheet"
 	type="text/css">
@@ -49,8 +49,12 @@
 
 	}
 
-	child[] children = {new child("id1", "name1", "0101111****"), new child("id2", "name2", "0102222****"),
-			new child("id3", "name3", "0103333****"), new child("id4", "name4", "0104444****")};%>
+	child[] children = {new child("gudwns", "최형준", "0101111****"), new child("rldnd", "윤기웅", "0102222****"),
+			new child("dkfla", "최아림", "0103333****"), new child("dndus", "조우연", "0104444****"),
+			new child("dbstjr", "최윤석", "0105555****")};%>
+	<%
+	request.setCharacterEncoding("UTF-8");
+	%>
 	<header>
 		<%@ include file="header.jsp"%>
 	</header>
@@ -76,7 +80,9 @@
 						<td class="children_table_id"><%=cc.id%></td>
 						<td class="children_table_name"><%=cc.name%></td>
 						<td class="children_table_phone_number"><%=cc.phone_number%></td>
-						<td class="children_table_button"><button onclick="checkup('<%=cc.id%>', '<%=cc.name%>')" class="select_child">진료하기</button></td>
+						<td class="children_table_button"><button
+								onclick="checkup('<%=cc.id%>', '<%=cc.name%>')"
+								class="select_child">진료하기</button></td>
 					</tr>
 
 					<%
@@ -87,34 +93,53 @@
 		</div>
 		<div class="work_space_box">
 			<div id="image_upload">
-				<form action="" method="post" onsubmit="return image_check()">
-				<ul>
-					<li class = "form_list"><input type="hidden" name = "child_id" readonly id="selected_child_id"></li>
-					<li class = "form_list">이름 <input type="text" name = "child_name" readonly id="selected_child_name" class = "child_info_form"></li>
-					<li class = "form_list"><input type="file" name = "bone_image" id="bone_image_upload" accept=".png" required></li>
-					<li class = "form_list last"><button class = "submit_button">제출</button></li>
+				<form action="result.jsp" method="post" onsubmit="return image_check()">
+					<ul>
+						<li class="form_list"><input type="hidden" name="child_id"
+							readonly id="selected_child_id"></li>
+						<li class="form_list">이름 <input type="text" name="child_name"
+							readonly id="selected_child_name" class="child_info_form"></li>
+						<li class="form_list"><div>성별</div> <input type="radio"
+							name="child_gender" id="gender_male" value="male"><label
+							for="gender_male">남자</label> <input type="radio"
+							name="child_gender" id="gender_female" value="female"><label
+							for="gender_female">여자</label></li>
+
+						<li class="form_list"><input type="file" name="bone_image"
+							id="bone_image_upload" accept=".png" required></li>
+						<li class="form_list last"><button class="submit_button">제출</button></li>
 					</ul>
 				</form>
 			</div>
 			<div id="registration">
-				<form action="" method="post" onsubmit="return child_registration_check()" id = "registration_form" autocomplete = "off">
-				<ul>
-					<li class = "form_list">아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input type="text" name = "child_id" placeholder="아이디" maxlength = "20" class = "child_registration"></li>
-					<li class = "form_list">부모님 아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input type="text" name = "parent_id" placeholder="부모님 아이디" maxlength = "20" class = "child_registration"></li>
-					<li class = "form_list">이름<input type="text" name = "child_name" placeholder="이름" class = "child_registration"></li> 
-					<li class = "form_list">이메일<input type="text" name = "child_email" placeholder="이메일" class = "child_registration"></li>
-					<li class = "form_list">전화번호<input type="tel" name = "phone_number" placeholder="전화번호" class = "child_registration"></li>
-					<li class = "form_list">부모님 전화번호<input type="tel" name = "parent_phone_number" placeholder="부모님 전화번호" class = "child_registration"></li>
-					<li class = "form_list last"><button class = "submit_button">등록</button></li>
-				</ul>
+				<form action="" method="post" onsubmit="return child_registration_check()" id="registration_form" autocomplete="off">
+					<ul>
+						<li class="form_list">아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input
+							type="text" name="child_id" placeholder="아이디" maxlength="20"
+							class="child_registration"></li>
+						<li class="form_list">부모님 아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input
+							type="text" name="parent_id" placeholder="부모님 아이디" maxlength="20"
+							class="child_registration"></li>
+						<li class="form_list">이름<input type="text" name="child_name"
+							placeholder="이름" class="child_registration"></li>
+						<li class="form_list">이메일<input type="text"
+							name="child_email" placeholder="이메일" class="child_registration"></li>
+						<li class="form_list">전화번호<input type="tel"
+							name="phone_number" placeholder="전화번호" class="child_registration"></li>
+						<li class="form_list">부모님 전화번호<input type="tel"
+							name="parent_phone_number" placeholder="부모님 전화번호"
+							class="child_registration"></li>
+						<li class="form_list last"><button class="submit_button">등록</button></li>
+					</ul>
 				</form>
 			</div>
 		</div>
 	</div>
 	<footer>
-		<%--@ include file="footer.jsp"--%>
+		<%@ include file="footer.jsp"%>
 	</footer>
 	<script>
+		
 	</script>
 </body>
 </html>

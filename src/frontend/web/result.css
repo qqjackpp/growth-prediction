@@ -8,15 +8,11 @@
 
 }
 
-#child_privacy_page{
-	display : none;
-
-}
-
-#child_report_page{
+#child_privacy_page, #child_bone_page, #child_report_page{
 	display : none;
 }
-.result_page_box, .privacy_page_box, .report_page_box{
+
+.result_page_box, .privacy_page_box, .report_page_box, .bone_page_box{
 	display : flex;
 	background-color : #dadada;
 }
@@ -36,10 +32,6 @@
 
 #show_result_button{
 	border-color : #dadada;
-}
-
-.bone_image{
-	background-color : blue;
 }
 
 .doctor_recommandation{
@@ -72,14 +64,24 @@ tr:nth-child(even){
 	background-color : white;
 }
 
+.table_legend{
+	width : 100px;
+}
+
+	
+.recommandation_form{
+	width : 640px;
+	margin : 10px 15px;
+	
+}
 .form_list{
 	margin : 10px;
 }
 
 .doctor_form{
 	display : block;
-	width : 400px;
-	height : 30px;
+	width : 620px;
+	height : 40px;
 	margin : 10px 0;
 }
 
@@ -91,4 +93,15 @@ tr:nth-child(even){
 	width : 100px;
 	height : 30px;
 	margin : 10px 0;
+}
+
+.bone_image{
+	width : 1060px;
+	text-align : center;
+	margin : 10px;
+	background-color : #c1c1c1;
+}
+
+.textarea_box{
+	height : 100px;
 }
