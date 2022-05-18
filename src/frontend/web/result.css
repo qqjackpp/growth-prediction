@@ -17,6 +17,9 @@
 	background-color : #dadada;
 }
 
+.report_page_box{
+	flex-direction : column;
+}
 .result_menu{
 	width : 100%;
 }
@@ -45,13 +48,16 @@
 }
 
 .result_table {
-	border : 1px solid;
-	border-collapse : collapse;
 	width : 380px;
 	margin : 10px auto;
-	text-align : center;
+	
 }
-
+table{
+	border : 1px solid;
+	border-collapse : collapse;
+	text-align : center;
+	
+}
 tr, td{
 	border : 1px solid;
 }
@@ -104,4 +110,23 @@ tr:nth-child(even){
 
 .textarea_box{
 	height : 100px;
+}
+
+.chart_div{
+	box-sizing : content-box;
+	width : 900px;
+	height : 400px;
+	margin : 15px auto;
+	border : 1px solid;
+	
+}
+
+.report_history{
+	width : 900px;
+	margin : 20px auto;
+}
+
+.privacy_table{
+	width : 900px;
+	margin : 20px auto;
 }

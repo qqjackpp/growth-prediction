@@ -10,6 +10,7 @@
 <link href="result.css" rel="stylesheet" type="text/css">
 <!-- javascript file -->
 <script src="result.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <!-- google gont Noto Sans KR -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +19,77 @@
 	rel="stylesheet">
 </head>
 <body>
+<script type="text/javascript">
+<%!int[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+	double[] arr2 = {1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 10.10, 11.11, 12.12};
+	int[] arr3 = {3, 1, 4, 1, 5, 9, 6, 5, 3, 5, 1, 2};%>
+	google.charts.load('current', {
+		'packages' : [ 'line', 'corechart' ]
+	});
+	google.charts.setOnLoadCallback(drawBoneAgeChart);
+	google.charts.setOnLoadCallback(drawPredHeightChart);
 
+	function drawBoneAgeChart() {
+		var chartDiv = document.getElementById('boneage_chart_div');
+		var data = new google.visualization.DataTable();
+		data.addColumn('number', 'Month');
+		data.addColumn('number', "골연령");
+		data.addColumn('number', "역연령");
 
+		data.addRows([
+			<%for (int i = 0; i < arr1.length; i++) {%>
+			[<%=arr1[i]%>	,<%=arr2[i]%>	,<%=arr3[i]%>	],
+			<%}%>
+		]);
+
+		var materialOptions = {
+			chart : {
+				title : '현재 키와 예측 키'
+			},
+			width : 900,
+			height : 400,
+			vAxis: { title: "나이" },
+			hAxis : {title: "날짜"},
+		};
+
+		var materialChart = new google.charts.Line(chartDiv);
+		materialChart.draw(data, google.charts.Line.convertOptions(materialOptions));
+
+	}
+	
+	function drawPredHeightChart() {
+		var chartDiv = document.getElementById('height_chart_div');
+		var data = new google.visualization.DataTable();
+		data.addColumn('number', 'Month');
+		data.addColumn('number', "키");
+		data.addColumn('number', "예측키");
+
+		data.addRows([
+			<%for (int i = 0; i < arr1.length; i++) {%>
+			[<%=arr1[i]%>	,<%=arr2[i]%>+2	,<%=arr3[i]%>*2	],
+			<%}%>
+		]);
+
+		var materialOptions = {
+			chart : {
+				title : '골연령과 역연령'
+			},
+			width : 900,
+			height : 400,
+			vAxis: { title: "나이" },
+			hAxis : {title: "날짜"},
+		};
+
+		var materialChart = new google.charts.Line(chartDiv);
+		materialChart.draw(data, google.charts.Line.convertOptions(materialOptions));
+
+	}
+	
+	
+</script>
 	<%
 	request.setCharacterEncoding("UTF-8");
-
+/* 
 	String name = request.getParameter("child_name");
 	String gender = request.getParameter("child_gender");
 	String ko_gender;
@@ -31,7 +98,9 @@
 	} else {
 		ko_gender = "여";
 	}
-
+ */
+ 	String name = "가나다";
+ 	String ko_gender = "남";
 	double bone_age = 11.1;
 	%>
 	<header>
@@ -68,7 +137,7 @@
 							<td>골연령</td>
 							<td><%=bone_age%>세</td>
 						</tr>
-						<!-- <tr>
+						<%-- <tr>
 							<td>역연령</td>
 							<td>역연령 수치</td>
 						</tr>
@@ -92,7 +161,7 @@
 						<tr>
 							<td>예측키</td>
 							<td>예측 키</td>
-						</tr> -->
+						</tr> --%>
 					</table>
 				</div>
 				<div class="doctor_recommandation">
@@ -121,17 +190,34 @@
 
 		<!-- 아이 생활정보 관련 페이지 -->
 		<div id="child_privacy_page">
-			<div class="privacy_page_box">privacy</div>
+			<div class="privacy_page_box">
+				<table class = "privacy_table">
+				<tr><td>날짜</td><td>운동량</td><td>수면시간</td><td>걸음걸이</td></tr>
+				<%-- <%for ( report before : reports){ %>
+				<tr><td><%=before.date%></td><td><%=before.boneage%></td><td><%=before.age%></td><td><%before.height%></td><td><%=before.predheight%></td><td>사진보기</td></tr>
+				<%} %> --%>
+				</table>
+			</div>
 		</div>
 
 
 		<!-- 이전의 골연령 검사 결과  -->
 		<div id="child_report_page">
-			<div class="report_page_box">골연령 검사 결과</div>
+			<div class="report_page_box">
+				<div id = "boneage_chart_div" class = "chart_div"></div>
+				<div id = "height_chart_div" class = "chart_div"></div>
+				<table class = "report_history">
+				<tr><td>날짜</td><td>골연령</td><td>역연령</td><td>키</td><td>예측키</td><td>사진</td></tr>
+				<%-- <%for ( report before : reports){ %>
+				<tr><td><%=before.date%></td><td><%=before.boneage%></td><td><%=before.age%></td><td><%before.height%></td><td><%=before.predheight%></td><td>사진보기</td></tr>
+				<%} %> --%>
+				</table>
+			</div>
 		</div>
 
 
 	</div>
+
 	<footer>
 		<%@ include file="footer.jsp"%>
 	</footer>

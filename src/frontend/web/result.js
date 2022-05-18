@@ -33,6 +33,8 @@ function show_report_page(){
 	document.getElementById("show_privacy_button").style.borderColor = "black";
 	document.getElementById("show_report_button").style.borderColor = "#dadada";
 	document.getElementById("show_picture_button").style.borderColor = "black";
+	drawBoneAgeChart();
+	drawPredHeightChart();
 	
 }
 
