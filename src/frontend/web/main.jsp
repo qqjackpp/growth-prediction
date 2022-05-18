@@ -60,11 +60,12 @@
 	<div class="main_contents">
 		<div class="select">
 			<div class="above_list">
-				<!-- button onclick="" class="above_button">검색</button -->
 				<button onclick="new_child()" class="above_button">등록</button>
+				<button onclick="search()" class="above_button">검색</button>
+				<input type="text" id = "child_search_input" onkeyup="child_saerch()" placeholder = "아이 정보">
 			</div>
 			<div>
-				<table class="children_table">
+				<table id ="children_table">
 					<tr class="children_table_head">
 						<td>id</td>
 						<td>이름</td>
@@ -113,21 +114,10 @@
 			<div id="registration">
 				<form action="" method="post" onsubmit="return child_registration_check()" id="registration_form" autocomplete="off">
 					<ul>
-						<li class="form_list">아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input
-							type="text" name="child_id" placeholder="아이디" maxlength="20"
-							class="child_registration"></li>
-						<li class="form_list">부모님 아이디 (영어 대소문자와 숫자를 포함해 5~20글자)<input
-							type="text" name="parent_id" placeholder="부모님 아이디" maxlength="20"
-							class="child_registration"></li>
-						<li class="form_list">이름<input type="text" name="child_name"
-							placeholder="이름" class="child_registration"></li>
-						<li class="form_list">이메일<input type="text"
-							name="child_email" placeholder="이메일" class="child_registration"></li>
-						<li class="form_list">전화번호<input type="tel"
-							name="phone_number" placeholder="전화번호" class="child_registration"></li>
-						<li class="form_list">부모님 전화번호<input type="tel"
-							name="parent_phone_number" placeholder="부모님 전화번호"
-							class="child_registration"></li>
+						<li class="form_list">아이 이름<input type="text" name="childName" placeholder="아이 이름" required class="child_registration"></li>
+						<li class="form_list">아이 전화번호('-'없이 숫자만 입력)<input type="text" name="childPhone" required placeholder="아이 전화번호" class="child_registration"></li>
+						<li class="form_list">부모님 이름<input type="text" name="parentName" placeholder="부모님 이름" required class="child_registration"></li>
+						<li class="form_list">부모님 전화번호('-'없이 숫자만 입력)<input type="text" name="parentPhone" required placeholder="부모님 전화번호" class="child_registration"></li>
 						<li class="form_list last"><button class="submit_button">등록</button></li>
 					</ul>
 				</form>

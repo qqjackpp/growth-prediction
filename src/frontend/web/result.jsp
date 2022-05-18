@@ -214,8 +214,6 @@
 				</table>
 			</div>
 		</div>
-
-
 	</div>
 
 	<footer>

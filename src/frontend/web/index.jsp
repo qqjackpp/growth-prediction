@@ -46,12 +46,6 @@
 					<div class="login_help">
 						<a href="/growth_prediction/signup">회원가입</a>
 					</div>
-					<div class="login_help">
-						<a href="/growth_prediction/find_id">아이디 찾기</a>
-					</div>
-					<div class="login_help">
-						<a href="/growth_prediction/find_pw">비밀번호 찾기</a>
-					</div>
 				</div>
 			</div>
 		</div>
