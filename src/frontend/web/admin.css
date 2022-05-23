@@ -1,0 +1,44 @@
+table {
+	width : 1060px;
+	border : 1px solid;
+	border-collapse : collapse;
+	margin : 10px auto;
+	text-align : center;
+}
+
+tr, td{
+	border : 1px solid;
+}
+
+#authorized_user_area{
+	display : none;
+}
+
+#unauthorized_user_area {
+	
+}
+
+.id_col{
+	width : 180px;
+}
+
+.name_col{
+	width : 125px;
+	
+}
+
+.hospital_col{
+	width : 170px;
+}
+
+.email_col{
+	width : 190px;
+}
+
+.phone_col{
+	width : 260px;
+}
+
+.table_head{
+	height : 35px;
+}

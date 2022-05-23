@@ -17,8 +17,8 @@ function child_registration_check(){
 	var registration_form = document.getElementById("registration_form");
 	var formData = new FormData(registration_form);
 	
-	var childPhone = (String)(formData.get("childPhone"));
-	var parentPhone = (String)(formData.get("parentPhone"));
+	var childPhone = (String)(formData.get("childnumber"));
+	var parentPhone = (String)(formData.get("parentnumber"));
 
 	for (let i = 0; i < childPhone.length ; i++){
 		var ch = childPhone[i];
@@ -45,7 +45,6 @@ function checkup(id, name){
 	document.getElementById("image_upload").style.display="block";
 	document.getElementById("selected_child_id").value=id;
 	document.getElementById("selected_child_name").value=name;
-	console.log(document.getElementById("selected_child_id").value);
 }
 
 //첨부 이미지의 확장자 확인(png만 가능)
@@ -55,12 +54,12 @@ function image_check() {
 	let fileName = picture.name;
 	let extension = fileName.split('.').pop();
 	
-	
 	if (extension.toLowerCase() != "png"){
 		alert("이미지 확장자가 png여야만 합니다.")
 		return false;
 	}
-
+	
+	document.getElementById("current_time").value=get_date();
 }
 
 //아이 테이블 내 검색
@@ -97,4 +96,26 @@ function search(){
 		input.style.display = "none";
 	}
 	
+}
+
+//현재 시간
+function get_date(){
+	var date = new Date();
+	var year = date.getFullYear().toString();
+	var month = date.getMonth() + 1;
+	month = month < 10 ? '0' + month.toString() : month.toString();
+	
+	var day = date.getDate();
+	day = day < 10 ? '0' + day.toString() : day.toString();
+	
+	var hour = date.getHours();
+	hour = hour < 10 ? '0' + hour.toString() : hour.toString();
+	
+	var min = date.getMinutes();
+	min = min < 10 ? '0' + min.toString() : min.toString();
+	
+	var sec = date.getSeconds();
+	sec = sec < 10 ? '0' + sec.toString() : sec.toString();
+	
+	return year + month + day + hour + min + sec;
 }

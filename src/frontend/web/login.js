@@ -6,8 +6,8 @@
 	var login_form = document.getElementById("login");
 	var formData = new FormData(login_form);
 	
-	var id = (String)(formData.get("doctor_id"));
-	var pw = (String)(formData.get("doctor_pw"));
+	var id = (String)(formData.get("doctorid"));
+	var pw = (String)(formData.get("doctorpw"));
 	
 	if ((id.length<5)||(id.length>20)){
 		alert("잘못된 아이디입니다.");
@@ -31,11 +31,4 @@
 			return false;
 		}
 	}
-/*	fetch("/login", {
-		method : "POST",
-		body : formData
-	})
-	.then((response)=>response.json)
-	.catch(console.log("error"));*/
-	
 }
