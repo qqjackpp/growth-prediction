@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>사용자 정보</title>
 <!-- css file -->
 <link href="common.css" rel="stylesheet" type="text/css">
 <link href="info.css" rel="stylesheet" type="text/css">
@@ -21,33 +21,22 @@
 	<div class="main_contents">
 			<table class = "doctor_info">
 				<tr>
-					<td>아이디</td>
-					<td>dbstjr<%-- <%=doctor.id% --%></td>
+					<td class = "info_name">아이디</td>
+					<td class = "info_value">dbstjr<%-- <%=doctor.id% --%></td>
+					<td class = "info_name">이름</td>
+					<td class = "info_value">최윤석<%-- <%=doctor.name %> --%></td>
 				</tr>
 				<tr>
-					<td>이름</td>
-					<td>최윤석<%-- <%=doctor.name %> --%></td>
+					<td class = "info_name">병원명</td>
+					<td class = "info_value">가나다<%-- <%=doctor.hospitalname %> --%></td>
+					<td class = "info_name">전화번호</td>
+					<td class = "info_value">1231241<%-- <%doctor.phone %> --%></td>
 				</tr>
 				<tr>
-					<td>병원명</td>
-					<td>가나다<%-- <%=doctor.hospitalname %> --%></td>
-				</tr>
-				<tr>
-					<td>이메일</td>
-					<td>aaa@aaa.aa<%-- <%=doctor.email %> --%></td>
-				</tr>
-				<tr>
-					<td>전화번호</td>
-					<td>1231241<%-- <%doctor.phone %> --%></td>
-				</tr>
-				<tr>
-					<td>검진 횟수</td>
-					<td>12<%-- <%doctor.times %> --%></td>
+					<td class = "info_name">이메일</td>
+					<td class = "info_value">aaa@aaa.aa<%-- <%=doctor.email %> --%></td>
 				</tr>
 			</table>
 	</div>
-	<footer>
-		<%@ include file="footer.jsp"%>
-	</footer>
 </body>
 </html>

@@ -62,6 +62,7 @@ tr, td{
 	border : 1px solid;
 }
 
+
 tr:nth-child(odd){
 	background-color : #e8e8e8;
 }
@@ -74,6 +75,9 @@ tr:nth-child(even){
 	width : 100px;
 }
 
+.result_table_row{
+	height : 40px;
+}
 	
 .recommandation_form{
 	width : 640px;

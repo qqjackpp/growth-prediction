@@ -39,7 +39,6 @@
 			<div>
 				<table id="children_table">
 					<tr class="children_table_head">
-						<td>id</td>
 						<td>이름</td>
 						<td>전화번호</td>
 						<td>진료하기</td>
@@ -65,13 +64,14 @@
 			<div id="image_upload">
 				<form action="/growthprediction/signin/result" method="post" onsubmit="return image_check()">
 					<ul>
+						<li class="form_list">이름<input type="text" name="childname" readonly id="selected_child_name" class="child_info_form"></li>
 						<li class="form_list"><input type="hidden" name="childid" readonly id="selected_child_id"></li>
-						<li class="form_list"><input type="hidden" name="checkdate" id="current_time"></li>
-						<li class="form_list">이름 <input type="text" name="childname" readonly id="selected_child_name" class="child_info_form"></li>
+						<li class="form_list"><input type="hidden" name="doctorid" readonly value="${doctorid}"></li>
 						<li class="form_list"><div>성별</div> <input type="radio" name="childgender" id="gender_male" value="male"><label for="gender_male">남자</label> <input type="radio" name="childgender" id="gender_female" value="female"><label for="gender_female">여자</label></li>
-						<li class="form_list">키<input type="text" name="childheight" class="child_info_form"></li>
-						<li class="form_list">나이<input type="text" name="childage" class="child_info_form"></li>
-						<li class="form_list">체중<input type="text" name="childweight" class="child_info_form"></li>
+						<li class="form_list">생년월일<input type="text" name="childbirth" class="child_info_form"></li>
+						<li class="form_list">키<input type="number" name="childheight" class="child_info_form" step="0.1"></li>
+						<li class="form_list">체중<input type="number" name="childweight" class="child_info_form" step="0.1"></li>
+						<li class="form_list"><input type="file" name="bone_image" id="bone_image_upload" accept=".png" required></li>
 						<li class="form_list last"><button class="submit_button">검사</button></li>
 					</ul>
 				</form>

@@ -112,8 +112,6 @@
 				id="show_result_button">결과보기</button>
 			<button onclick="show_picture_page()" class="result_menu_button"
 				id="show_picture_button">사진보기</button>
-			<button onclick="show_privacy_page()" class="result_menu_button"
-				id="show_privacy_button">아이 생활 습관</button>
 			<button onclick="show_report_page()" class="result_menu_button"
 				id="show_report_button">이전 검사 결과</button>
 
@@ -125,43 +123,38 @@
 				<div class="report_data">
 					<!--  골 연령 검사 결과 내용  -->
 					<table class="result_table">
-						<tr>
+						<tr class = "result_table_row">
 							<td class = "table_legend">이름</td>
 							<td><%=name%></td>
 						</tr>
-						<tr>
+						<tr class = "result_table_row">
 							<td>성별</td>
 							<td><%=ko_gender%></td>
 						</tr>
-						<tr>
+						<tr class = "result_table_row">
+							<td>나이</td>
+							<td>현재 날짜 - 생일</td>
+						</tr>
+						<tr class = "result_table_row">
 							<td>골연령</td>
 							<td><%=bone_age%>세</td>
 						</tr>
-						<%-- <tr>
-							<td>역연령</td>
-							<td>역연령 수치</td>
-						</tr>
-						
-						<tr>
-							<td>예측키</td>
-							<td>예측 키</td>
-						</tr>
-						<tr>
+						<tr class = "result_table_row">
 							<td>키</td>
 							<td>키</td>
 						</tr>
-						<tr>
-							<td>체중</td>
-							<td>체중</td>
-						</tr>
-						<tr>
-							<td>BMI</td>
-							<td>BMI</td>
-						</tr>
-						<tr>
+						<tr class = "result_table_row">
 							<td>예측키</td>
 							<td>예측 키</td>
-						</tr> --%>
+						</tr>
+						<tr class = "result_table_row">
+							<td>체중</td>
+							<td>체중</td>
+						</tr>
+						<tr class = "result_table_row">
+							<td>BMI</td>
+							<td>BMI</td>
+						</tr>
 					</table>
 				</div>
 				<div class="doctor_recommandation">
@@ -187,19 +180,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- 아이 생활정보 관련 페이지 -->
-		<div id="child_privacy_page">
-			<div class="privacy_page_box">
-				<table class = "privacy_table">
-				<tr><td>날짜</td><td>운동량</td><td>수면시간</td><td>걸음걸이</td></tr>
-				<%-- <%for ( report before : reports){ %>
-				<tr><td><%=before.date%></td><td><%=before.boneage%></td><td><%=before.age%></td><td><%before.height%></td><td><%=before.predheight%></td><td>사진보기</td></tr>
-				<%} %> --%>
-				</table>
-			</div>
-		</div>
-
 
 		<!-- 이전의 골연령 검사 결과  -->
 		<div id="child_report_page">
