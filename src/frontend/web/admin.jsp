@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 </head>
 <body>
+<%!String name = "dsd"; %>
 	<header>
 		<nav>
 			<ul type="none" class="navigator">
@@ -44,7 +45,7 @@
 					<td>aa@aa.aa</td>
 					<td>01011111111</td>
 					<td><form method = "post" action = "">
-							<input type="hidden" value="doctorid">
+							<input type="hidden" value="<%=name%>">
 							<button>승인 해제</button>
 						</form></td>
 				</tr>
